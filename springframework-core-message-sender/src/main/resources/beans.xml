@@ -12,6 +12,7 @@
     </bean>
 
 
+
     <bean id="sendEmailMessage" class="com.nhnacademy.edu.springframework.MessageSender.sendEmailMessage" >
     </bean>
 
