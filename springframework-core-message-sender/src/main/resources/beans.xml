@@ -5,6 +5,9 @@
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
+    <bean id="koreanGreeter" class="com.nhnacademy.edu.springframework.KoreanGreeter" >
+    </bean>
+
     <bean id="greetingService" class="com.nhnacademy.edu.springframework.greeting.GreetingService" >
         <property name="greeter" ref="koreanGreeter" />
     </bean>
