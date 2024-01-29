@@ -4,7 +4,6 @@
        xsi:schemaLocation="
         http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-
     <bean id="englishGreeter" class="com.nhnacademy.edu.springframework.KoreanGreeter" >
     </bean>
 
@@ -22,15 +21,15 @@
     </bean>
 
 
-    <bean id="englishGreeter2" class="com.nhnacademy.edu.springframework.practice.practice03.EnglishGreeter"  scope="singleton">
-    </bean>
+<!--    <bean id="englishGreeter2" class="com.nhnacademy.edu.springframework.practice.practice03.EnglishGreeter"  scope="singleton">-->
+<!--    </bean>-->
 
-    <bean id="koreanGreeter2" class="com.nhnacademy.edu.springframework.practice.practice03.KoreanGreeter" scope="prototype">
-    </bean>
+<!--    <bean id="koreanGreeter2" class="com.nhnacademy.edu.springframework.practice.practice03.KoreanGreeter" scope="prototype">-->
+<!--    </bean>-->
 
 
 
-    <bean id="englishGreeter3" class="com.nhnacademy.edu.springframework.practice.practice04.EnglishGreeter" destroy-method="destroy">
+<!--    <bean id="englishGreeter3" class="com.nhnacademy.edu.springframework.practice.practice04.EnglishGreeter" destroy-method="destroy">-->
 
 
 
