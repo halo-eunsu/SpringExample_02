@@ -1,4 +1,4 @@
-package com.nhnacademy.edu.springframework.MessageSender;
+package com.nhnacademy.edu.springframework.excheck;
 
 public class User {
 
