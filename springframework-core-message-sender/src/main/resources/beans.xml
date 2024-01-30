@@ -16,11 +16,10 @@
 
 
     <bean id="koreanGreeter" class="com.nhnacademy.edu.springframework.KoreanGreeter" >
-        <qualifier type="com.nhnacademy.edu.springframework.SMS" />
     </bean>
 
-    <bean id="englishGreeter" class="com.nhnacademy.edu.springframework.EnglishGreeter" >
-    </bean>
+<!--    <bean id="englishGreeter" class="com.nhnacademy.edu.springframework.EnglishGreeter" >-->
+<!--    </bean>-->
 
     <bean id="greetingService" class="com.nhnacademy.edu.springframework.greeting.GreetingService" >
     </bean>
