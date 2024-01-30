@@ -10,6 +10,7 @@ public class Main {
         try (ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("beans.xml")) {
             GreetingService service = context.getBean("greetingService", GreetingService.class);
             service.greet();
+
         }
 
     }
