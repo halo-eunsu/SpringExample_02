@@ -1,5 +1,7 @@
 package com.nhnacademy.edu.springframework.message;
 
+import org.springframework.beans.factory.annotation.Value;
+
 public class User {
     private String email;
     private String phoneNumber;

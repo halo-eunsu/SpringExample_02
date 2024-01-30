@@ -28,6 +28,14 @@
     </bean>
 
 
+    <bean id="messageSender" class="com.nhnacademy.edu.springframework.message.MessageSendService" >
+    </bean>
+
+    <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.message.SmsMessageSender" >
+    </bean>
+
+    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.message.EmailMessageSender" >
+    </bean>
 
 
 
