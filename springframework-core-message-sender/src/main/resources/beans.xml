@@ -14,6 +14,8 @@
     <!-- @Required 애너테이션 사용을 위해 추가 -->
     <bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor" />
 
+    <context:property-placeholder location="classpath:greeter.properties" />
+
 
     <bean id="koreanGreeter" class="com.nhnacademy.edu.springframework.KoreanGreeter" >
     </bean>
@@ -24,6 +26,8 @@
 
     <bean id="greetingService" class="com.nhnacademy.edu.springframework.greeting.GreetingService" >
     </bean>
+
+
 
 
 
