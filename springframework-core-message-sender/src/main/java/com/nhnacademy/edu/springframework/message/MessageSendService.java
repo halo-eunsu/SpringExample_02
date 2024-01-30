@@ -1,18 +1,18 @@
 package com.nhnacademy.edu.springframework.message;
 
 
+import com.nhnacademy.edu.springframework.SMS;
 import org.springframework.beans.factory.annotation.Value;
 
 public class MessageSendService {
     private MessageSender messageSender;
 
-    @Value("$(phoneNumber)")
     private String phoneNumber;
 
     public MessageSendService() {
     }
 
-    public MessageSendService(@SMS MessageSender messageSender, @Value("$(phoneNumber)") String phoneNumber) {
+    public MessageSendService(@SMS MessageSender messageSender, @Value("${phoneNumber}") String phoneNumber) {
 
         this.messageSender = messageSender;
         this.phoneNumber = phoneNumber;

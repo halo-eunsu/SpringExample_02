@@ -32,6 +32,7 @@
     </bean>
 
     <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.message.SmsMessageSender" >
+        <qualifier type="com.nhnacademy.edu.springframework.SMS" />
     </bean>
 
     <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.message.EmailMessageSender" >
