@@ -4,7 +4,9 @@ package com.nhnacademy.edu.springframework.greeting;
 //import com.nhnacademy.edu.springframework.greeting.stereotype.GreeterQualifier;
 //import com.nhnacademy.edu.springframework.greeting.stereotype.Language;
 import com.nhnacademy.edu.springframework.Greeter;
+import com.nhnacademy.edu.springframework.SMS;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Required;
 
 public class GreetingService {
 
@@ -20,7 +22,8 @@ public class GreetingService {
         return greeter.sayHello();
     }
 
-    public void setGreeter(Greeter greeter) {
+    @Autowired
+    public void setGreeter(@SMS Greeter greeter) {
         this.greeter = greeter;
     }
 }
