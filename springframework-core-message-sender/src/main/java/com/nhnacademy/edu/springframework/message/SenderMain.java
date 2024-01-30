@@ -7,6 +7,7 @@ public class SenderMain {
 
     public static void main(String[] args) {
 
+
 //            User user =
 //        otry (ClassPathXmlApplicatinContext context = new ClassPathXmlApplicationContext("beans.xml")) {
 //            MessageSendService service = context.getBean("messageSender", MessageSendService.class);
