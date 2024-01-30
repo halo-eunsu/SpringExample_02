@@ -2,6 +2,7 @@ package com.nhnacademy.edu.springframework.message;
 
 
 import com.nhnacademy.edu.springframework.SMS;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 
 public class MessageSendService {
@@ -12,8 +13,10 @@ public class MessageSendService {
     public MessageSendService() {
     }
 
+    @Autowired
     public MessageSendService(@SMS MessageSender messageSender, @Value("${phoneNumber}") String phoneNumber) {
 
+        System.out.println("---------------"+ phoneNumber);
         this.messageSender = messageSender;
         this.phoneNumber = phoneNumber;
     }
@@ -29,6 +32,8 @@ public class MessageSendService {
     }
 
     public void doSendMessage(User user, String message) {
+
+        user.setPhoneNumber(phoneNumber);
         messageSender.sendMessage(user, message);
     }
 }
