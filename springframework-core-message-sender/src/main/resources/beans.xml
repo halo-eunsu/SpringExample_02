@@ -14,4 +14,21 @@
 
 
 
+    <bean id="smsMessageSender" class="com.nhnacademy.edu.springframework.message.SmsMessageSender">
+    </bean>
+
+    <bean id="emailMessageSender" class="com.nhnacademy.edu.springframework.message.EmailMessageSender">
+    </bean>
+
+    <bean id="messageSendService" class="com.nhnacademy.edu.springframework.message.MessageSendService">
+        <constructor-arg ref="emailMessageSender"/>
+    </bean>
+
+
+
+    <bean id="user" class="com.nhnacademy.edu.springframework.message.User">
+    </bean>
+
+
+
 </beans>
