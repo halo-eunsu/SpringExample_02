@@ -6,13 +6,18 @@ package com.nhnacademy.edu.springframework.greeting;
 import com.nhnacademy.edu.springframework.Greeter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Required;
+import org.springframework.beans.factory.annotation.Value;
 
 public class GreetingService {
 
+    @Value("${from}")
+
     private Greeter greeter;
+    private final String name;
 
     public  GreetingService(){};
     public GreetingService(Greeter greeter) {
+
         this.greeter = greeter;
     }
 
