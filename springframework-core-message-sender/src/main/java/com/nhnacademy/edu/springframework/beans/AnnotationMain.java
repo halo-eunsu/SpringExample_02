@@ -7,6 +7,6 @@ public class AnnotationMain {
     public static void main(String[] args) {
         AnnotationConfigApplicationContext context =
                 new AnnotationConfigApplicationContext("com.nhnent.edu.spring.greeting");
-        context.getBean()
+
     }
 }
