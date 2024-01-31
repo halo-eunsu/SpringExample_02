@@ -1,6 +1,8 @@
 package com.nhnacademy.edu.springframework.message;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class EmailMessageSender implements MessageSender {
 
     public EmailMessageSender(){

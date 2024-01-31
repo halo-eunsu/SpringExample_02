@@ -6,6 +6,9 @@ import com.nhnacademy.edu.springframework.message.EmailMessageSender;
 import com.nhnacademy.edu.springframework.message.MessageSendService;
 import com.nhnacademy.edu.springframework.message.MessageSender;
 import com.nhnacademy.edu.springframework.message.SmsMessageSender;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.*;
 
 @Configuration
@@ -13,22 +16,18 @@ import org.springframework.context.annotation.*;
 @PropertySource("classpath:greeter.properties")
 public class MainConfig {
 
-    @Bean(name="smsMessageSender")
+    @Value("${phoneNumber}")
+    private String phoneNumber;
 
-    public MessageSender smsMessageSender() {
-        return new SmsMessageSender();
-    }
-
-    @Bean(name="emailMessageSender")
-
-    public MessageSender emailMessageSender() {
-        return new EmailMessageSender();
-    }
+    @Autowired
+    @Qualifier("smsMessageSender")
+    private MessageSender smsMessageSender;
 
     @Bean(name="messageSender")
-
     public MessageSendService messageSender() {
-        return new MessageSendService();
+        return new MessageSendService(smsMessageSender, phoneNumber);
     }
+
+
 
 }
