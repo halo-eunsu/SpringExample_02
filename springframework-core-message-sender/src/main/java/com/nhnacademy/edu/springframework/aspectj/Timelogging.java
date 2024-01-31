@@ -12,3 +12,5 @@
 //
 //    @Pointcut("execution(* com.nhnacademy.edu.springframework.message.*")
 //}
+
+
